@@ -100,15 +100,15 @@ public class CharacterStats : MonoBehaviour
     public void Texto_UI()
     {
         HP_texto.text = "" + HP + "/" + HP_Max;
-        Nivel_texto.text = "" + HP + "/" + Nivel;
-        Exp_texto.text = "" + HP + "/" + Exp_Max;
+        Nivel_texto.text = "" + Nivel;
+        Exp_texto.text = "" + Exp + "/" + Exp_Max;
 
-        Vitalidad_texto.text = "" + HP + "/" + Vitalidad;
-        Fuerza_texto.text = "" + HP + "/" + Fuerza;
-        Agilidad_texto.text = "" + HP + "/" + Agilidad;
-        Magia_texto.text = "" + HP + "/" + Magia;
-        Defensa_texto.text = "" + HP + "/" + Defensa;
+        Vitalidad_texto.text = "" + Vitalidad;
+        Fuerza_texto.text = "" + Fuerza;
+        Agilidad_texto.text = "" + Agilidad;
+        Magia_texto.text = "" + Magia;
+        Defensa_texto.text = "" + Defensa;
 
-        HP_texto.text = "" + HP + "/" + Puntos;
+        Puntos_texto.text = "" + Puntos;
     }
 }
