@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterStats : MonoBehaviour
 {
@@ -10,17 +11,30 @@ public class CharacterStats : MonoBehaviour
     public int Exp;
     public int Exp_Max;
 
-    public int Vitalidad;
-    public int Fuerza;
-    public int Agilidad;
-    public int Magia;
-    public int Defensa;
+    public int Vitalidad = 50;
+    public int Fuerza = 15;
+    public int Agilidad = 10;
+    public int Magia = 5;
+    public int Defensa = 15;
 
     public int Puntos;
+    
+    public Text HP_texto;
+    public Text Nivel_texto;
+    public Text Exp_texto;
+
+    public Text Vitalidad_texto;
+    public Text Fuerza_texto;
+    public Text Agilidad_texto;
+    public Text Magia_texto;
+    public Text Defensa_texto;
+
+    public Text Puntos_texto;
 
     private void Update()
     {
         SubirExp();
+        Texto_UI();
     }
 
     void SubirExp()
@@ -45,5 +59,56 @@ public class CharacterStats : MonoBehaviour
             Vitalidad++;
             Puntos--;
         }
+    }
+
+    public void SubirFuerza()
+    {
+        if (Puntos > 0)
+        {
+            Fuerza++;
+            Puntos--;
+        }
+    }
+
+    public void SubirAgilidad()
+    {
+        if (Puntos > 0)
+        {
+            Agilidad++;
+            Puntos--;
+        }
+    }
+
+    public void SubirMagia()
+    {
+        if (Puntos > 0)
+        {
+            Magia++;
+            Puntos--;
+        }
+    }
+
+    public void SubirDefensa()
+    {
+        if (Puntos > 0)
+        {
+            Defensa++;
+            Puntos--;
+        }
+    }    
+
+    public void Texto_UI()
+    {
+        HP_texto.text = "" + HP + "/" + HP_Max;
+        Nivel_texto.text = "" + HP + "/" + Nivel;
+        Exp_texto.text = "" + HP + "/" + Exp_Max;
+
+        Vitalidad_texto.text = "" + HP + "/" + Vitalidad;
+        Fuerza_texto.text = "" + HP + "/" + Fuerza;
+        Agilidad_texto.text = "" + HP + "/" + Agilidad;
+        Magia_texto.text = "" + HP + "/" + Magia;
+        Defensa_texto.text = "" + HP + "/" + Defensa;
+
+        HP_texto.text = "" + HP + "/" + Puntos;
     }
 }
