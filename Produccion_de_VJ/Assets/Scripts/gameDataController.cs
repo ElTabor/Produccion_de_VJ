@@ -16,13 +16,13 @@ public class gameDataController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C)) LoadData();
-        if (Input.GetKeyDown(KeyCode.G)) SaveData();
-    }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.C)) LoadData();
+    //    if (Input.GetKeyDown(KeyCode.G)) SaveData();
+    //}
 
-    private void LoadData()
+    public void LoadData()
     {
         if (File.Exists(saveArchives))
         {
@@ -39,7 +39,7 @@ public class gameDataController : MonoBehaviour
         }
     }
 
-    private void SaveData()
+    public void SaveData()
     {
         gameData newData = new gameData()
         {
@@ -50,5 +50,10 @@ public class gameDataController : MonoBehaviour
         File.WriteAllText(saveArchives, JSONchain);
 
         Debug.Log("Data saved");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
