@@ -21,12 +21,12 @@ public class MenuStats : MonoBehaviour
 
     public void Stats()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !menuStatsIsActive)
+        if (Input.GetKeyDown(KeyCode.C) && !menuStatsIsActive)
         {
             menuStats.SetActive(true);
             menuStatsIsActive = true;
         }
-        else if (Input.GetKeyDown(KeyCode.Escape) && menuStatsIsActive)
+        else if (Input.GetKeyDown(KeyCode.C) && menuStatsIsActive)
         {
             menuStats.SetActive(false);
             menuStatsIsActive = false;
