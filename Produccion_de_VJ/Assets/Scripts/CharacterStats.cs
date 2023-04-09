@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
 using UnityEngine.UI;
+=======
+>>>>>>> Stashed changes
 
 public class CharacterStats : MonoBehaviour
 {
@@ -11,6 +14,7 @@ public class CharacterStats : MonoBehaviour
     public int Exp;
     public int Exp_Max;
 
+<<<<<<< Updated upstream
     public int Vitalidad = 50;
     public int Fuerza = 15;
     public int Agilidad = 10;
@@ -30,11 +34,23 @@ public class CharacterStats : MonoBehaviour
     public Text Defensa_texto;
 
     public Text Puntos_texto;
+=======
+    public int Vitalidad;
+    public int Fuerza;
+    public int Agilidad;
+    public int Magia;
+    public int Defensa;
+
+    public int Puntos;
+>>>>>>> Stashed changes
 
     private void Update()
     {
         SubirExp();
+<<<<<<< Updated upstream
         Texto_UI();
+=======
+>>>>>>> Stashed changes
     }
 
     void SubirExp()
@@ -60,6 +76,7 @@ public class CharacterStats : MonoBehaviour
             Puntos--;
         }
     }
+<<<<<<< Updated upstream
 
     public void SubirFuerza()
     {
@@ -111,4 +128,6 @@ public class CharacterStats : MonoBehaviour
 
         Puntos_texto.text = "" + Puntos;
     }
+=======
+>>>>>>> Stashed changes
 }

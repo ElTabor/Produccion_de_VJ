@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     //private Animator animator;
 
+    public UIManager manager;
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -26,7 +28,8 @@ public class PlayerController : MonoBehaviour
         //animator.SetFloat("Horizontal", moveX);
         //animator.SetFloat("Vertical", moveY);
         //animator.SetFloat("Speed", moveInput.sqrMagnitude);
-       
+
+        if (Input.GetKeyDown(KeyCode.Escape)) manager.OpenPauseMenu();
     }
 
     private void FixedUpdate()
