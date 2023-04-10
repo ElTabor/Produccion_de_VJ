@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     //private Animator animator;
 
-    private UIManager manager;
+    public UIManager manager;
 
     void Start()
     {
